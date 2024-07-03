@@ -22,3 +22,27 @@ export const getDogs = async (limit) => {
     console.log(error);
   }
 };
+
+export const getBreedById = async (breedId) => {
+  try {
+    const response = await axios(`/breeds/${breedId}`);
+
+    const dataBreed = response.data;
+
+    return dataBreed;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getImageByBreedId = async (breedId) => {
+  try {
+    const response = await axios(`/images/${breedId}`);
+
+    const dataBreed = response.data;
+
+    return dataBreed;
+  } catch (error) {
+    console.log(error);
+  }
+};

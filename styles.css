@@ -41,10 +41,23 @@ header {
 
 .main-container {
   display: flex;
+  justify-content: end;
 }
 
 .sidebar {
   flex: 0.3;
+  padding: 40px;
+  position: fixed;
+  left: 0;
+  width: 30%;
+}
+
+.sidebar p {
+  font-weight: 600;
+}
+
+.sidebar span {
+  font-weight: 400;
 }
 
 .contents {
@@ -73,6 +86,7 @@ header {
   border-top: 1px solid #dedede;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card img {
@@ -109,4 +123,12 @@ header {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
+}
+
+#sidebarImg {
+  width: 100%;
+}
+
+#breedName {
+  text-align: center;
 }

@@ -1,5 +1,5 @@
-import { getDogs } from "./requestsApi.js";
-import { createCard } from "./createDomEl.js";
+import { getDogs, getBreedById, getImageByBreedId } from "./requestsApi.js";
+import { createCard, addedBreedInfo } from "./createDomEl.js";
 
 const cardsWrapper = document.getElementById("cards-wrapper");
 const loadMoreBtn = document.getElementById("load-btn");
@@ -25,3 +25,11 @@ loadMoreBtn.addEventListener("click", async () => {
     createCard(dog);
   });
 });
+
+export const cardHandler = async (breedId, reference_image_id) => {
+  const breedData = await getBreedById(breedId);
+  const breedImage = await getImageByBreedId(reference_image_id);
+  console.log(breedImage.url, "breedImage");
+  addedBreedInfo(breedData, breedImage.url);
+  console.log(breedData, "breedData");
+};
