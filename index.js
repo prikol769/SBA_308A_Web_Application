@@ -14,6 +14,8 @@ const initialLoad = async () => {
   dogs.forEach((dog) => {
     createCard(dog);
   });
+
+  cardHandler(dogs[0].id, dogs[0].reference_image_id);
 };
 
 initialLoad();
