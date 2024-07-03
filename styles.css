@@ -72,6 +72,7 @@ header {
   border-bottom: 5px solid #003594;
   border-top: 1px solid #dedede;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .card img {
@@ -87,6 +88,11 @@ header {
 
 .card-desc {
   padding: 3px 16px 16px;
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .load-btn {
